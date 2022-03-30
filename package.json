@@ -1,0 +1,28 @@
+{
+  "name": "api1node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "rm -rf ./dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remyHamed/api1Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remyHamed/api1Node/issues"
+  },
+  "homepage": "https://github.com/remyHamed/api1Node#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
