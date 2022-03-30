@@ -10,6 +10,21 @@ const app = (0, express_1.default)();
 app.get("/esgi", function (req, res) {
     res.send("cool from express");
 });
+app.post('/', function (req, rep) {
+    rep.json({
+        name: "esgi"
+    });
+});
+app.get("/school/:name/:classroom", function (req, resp) {
+    const n = req.params.name;
+    const cl = req.params.classroom;
+    const query = req.query.lang || "en"; // permet recupérer les paramss derière un query
+    const { lang } = req.query; // permet recupérer les paramss derière un query
+    resp.send("the name = " + n + "classe room" + cl + "lang" + query + "lang " + lang);
+});
+app.post("/school", express_1.default.json(), function (req, resp) {
+    resp.json(req.body);
+});
 app.listen(process.env.PORT, function () {
     console.log("server started en port" + process.env.PORT);
 });
